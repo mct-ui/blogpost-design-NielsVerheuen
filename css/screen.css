@@ -285,13 +285,15 @@ a:hover, a:focus {
     }
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/*
+    Utilities: u-max-width-small
+    ---
+    Utility classes to put specific max width onto elements
+*/
 
-@media (min-width: 576px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {}
+.u-max-width-small {
+    max-width: 36em !important;
+}
 
 /*
     Print styles.

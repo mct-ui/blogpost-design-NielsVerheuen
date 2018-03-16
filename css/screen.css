@@ -55,6 +55,12 @@ html {
     color: #5C6366;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 /*
@@ -182,6 +188,58 @@ a:hover, a:focus {
     Components: Article
 */
 
+.c-article__header, .c-article__body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.c-article__header {
+    padding: 24px 24px 0;
+}
+
+.c-article__body {
+    padding: 0 24px;
+}
+
+.c-article__date {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+.c-article__author {
+    margin-bottom: 48px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .c-article__header {
+        padding: 48px 48px 24px;
+    }
+    .c-article__body {
+        padding: 24px 48px;
+    }
+}
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .c-article__body {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .c-article__author {
+        width: 25%;
+        padding-right: 24px;
+    }
+    .c-article__content {
+        width: 75%;
+    }
+}
+
 /*
     Components: Author
 */
@@ -218,22 +276,18 @@ a:hover, a:focus {
     font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
+@media (min-width: 992px) {
+    .c-author {
+        display: block;
+    }
+    .c-author__image {
+        margin-bottom: 16px;
     }
 }
 
-/* Large devices (landscape tablets, desktops, 992px and up) */
+/* Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 576px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
